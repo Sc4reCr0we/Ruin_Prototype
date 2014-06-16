@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Arena\ArenaStateController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\GUI\AbilityCooldowns.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\HealthPushbackBar.cs" Line="28" Column="52" />
+      <File FileName="Assets\Scripts\Player\HealthScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Arena\ArenaStateController.cs" Line="81" Column="78" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

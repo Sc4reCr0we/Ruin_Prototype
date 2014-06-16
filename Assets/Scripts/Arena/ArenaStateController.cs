@@ -6,8 +6,10 @@ public class ArenaStateController : MonoBehaviour {
 	public float secondStateChangeTimer;
 	public float thirdStateChangeTimer;
 	public float colliderRadiusSpeed;
+	public Object electrified;
+
+	private Object electrifiedTemp;
 	private bool isState4 = false;
-	
 	private float colliderRadius;
 	private Animator animator;
 	private CircleCollider2D collider;
@@ -63,14 +65,22 @@ public class ArenaStateController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if (collider.gameObject.tag == "Player")
+		{
 			collider.GetComponent<OutsideArenaDamage>().isOutside = false;
+			if (electrifiedTemp != null)
+				Destroy (electrifiedTemp);
+		}
 
 	}
 	
 	void OnTriggerExit2D(Collider2D collider)
 	{
 		if (collider.gameObject.tag == "Player")
+		{
 			collider.GetComponent<OutsideArenaDamage>().isOutside = true;
+			electrifiedTemp = Instantiate (electrified, collider.transform.position, Quaternion.identity);
+		}
+			
 	}
 
 	public bool getState(){

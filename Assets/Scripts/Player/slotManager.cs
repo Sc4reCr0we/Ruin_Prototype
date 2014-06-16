@@ -12,7 +12,7 @@ public class slotManager : MonoBehaviour {
 	private float Q_cooldown = 0;
 	private float E_cooldown = 0;
 	private float R_cooldown = 0;
-	private float Spc_cooldown = 0;
+	public float Spc_cooldown = 0;
 
 	private Ability currentSlot;
 	private Animator animator;
