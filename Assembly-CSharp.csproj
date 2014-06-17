@@ -190,10 +190,12 @@
      <Compile Include="Assets\Scripts\Arena\Destructable\Arena1\energyballScript.cs" />
      <Compile Include="Assets\Scripts\Arena\ElectricityGenerator.cs" />
      <Compile Include="Assets\Scripts\Arena\ElectricityKiller.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Camera\CustomCursor.cs" />
      <Compile Include="Assets\Scripts\Classes\Ability.cs" />
      <Compile Include="Assets\Scripts\GUI\AbilityCooldowns.cs" />
      <Compile Include="Assets\Scripts\GUI\HealthPushbackBar.cs" />
+     <Compile Include="Assets\Scripts\GameController\InstantiateGame.cs" />
      <Compile Include="Assets\Scripts\MoveScript.cs" />
      <Compile Include="Assets\Scripts\Player\HealthScript.cs" />
      <Compile Include="Assets\Scripts\Player\OutsideArenaDamage.cs" />

@@ -12,14 +12,19 @@ public class Ability : MonoBehaviour{
 	public float pushback;
 	public float pushStack;
 
-	public bool isReady;
+	private bool _isReady = true;
+
+	public bool isReady{ get{ return _isReady; } set {_isReady = value;} }
+
 	public bool isCast;
+
 	public Transform instance;
 
 	public GameObject playerID;
 	
 	public void setReady(bool ready){
 		isReady = ready;
+
 	}
 
 	public virtual void cast(GameObject playerID1){

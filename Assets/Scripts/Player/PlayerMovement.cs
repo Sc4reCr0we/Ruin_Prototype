@@ -17,8 +17,14 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(playerNumber == 1)
 		{
-			horizontalInput = "Horizontal";
-			verticalInput = "Vertical";	
+			horizontalInput = "Horizontal_Player1";
+			verticalInput = "Vertical_Player1";	
+		}
+
+		if(playerNumber == 2)
+		{
+			horizontalInput = "Horizontal_Player2";
+			verticalInput = "Vertical_Player2";	
 		}
 		animator = GetComponent<Animator> ();
 
@@ -58,9 +64,6 @@ public class PlayerMovement : MonoBehaviour {
 
 
 			direction.x += Input.GetAxis (horizontalInput);
-
-
-
 			direction.y += Input.GetAxis (verticalInput);
 
 
