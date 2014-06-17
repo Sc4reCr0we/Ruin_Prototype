@@ -15,7 +15,7 @@ public class OutsideArenaDamage : MonoBehaviour {
 	void Update () 
 	{
 		if(isOutside)
-			GetComponent<HealthScript>().setHealth (-damagePerSecond * Time.deltaTime);
+			GetComponent<HealthScript>().setHealth (-damagePerSecond * Time.deltaTime);	
 	}
 	
 }

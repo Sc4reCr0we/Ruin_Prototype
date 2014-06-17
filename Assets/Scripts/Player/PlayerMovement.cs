@@ -5,14 +5,23 @@ public class PlayerMovement : MonoBehaviour {
 		
 	public float speed;
 	public float turnSpeed;
+	public int playerNumber = 1;
 	private Animator animator;
 	private bool canMove = true;
 	private bool isPushedback = false;
+	private string horizontalInput;
+	private string verticalInput;
+
 	
 	void Start ()
 	{
-		//speed *= 100f;
+		if(playerNumber == 1)
+		{
+			horizontalInput = "Horizontal";
+			verticalInput = "Vertical";	
+		}
 		animator = GetComponent<Animator> ();
+
 	}
 	
 	void Update () 
@@ -21,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 		//Left
 		
-		if (Input.GetKey ("a"))
+		/*if (Input.GetKey ("a"))
 		{
 			direction -= Vector3.right;
 		}
@@ -45,7 +54,16 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			direction -= Vector3.up;
 		}
-		
+		*/
+
+
+			direction.x += Input.GetAxis (horizontalInput);
+
+
+
+			direction.y += Input.GetAxis (verticalInput);
+
+
 
 		if (canMove && !isPushedback)
 
@@ -55,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 		float targetAngle = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 		
-		if (canMove && !isPushedback && (Input.GetKey("d") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("w"))) 
+		if (canMove && !isPushedback && (Input.GetAxis(horizontalInput) != 0 || Input.GetAxis (verticalInput) != 0)) 
 		{
 			
 			if(animator.GetBool("moving") == false)

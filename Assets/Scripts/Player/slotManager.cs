@@ -9,9 +9,9 @@ public class slotManager : MonoBehaviour {
 	public Ability Spc_slot;
 	private int slotNumb;
 
-	private float Q_cooldown = 0;
-	private float E_cooldown = 0;
-	private float R_cooldown = 0;
+	public float Q_cooldown = 0;
+	public float E_cooldown = 0;
+	public float R_cooldown = 0;
 	public float Spc_cooldown = 0;
 
 	private Ability currentSlot;

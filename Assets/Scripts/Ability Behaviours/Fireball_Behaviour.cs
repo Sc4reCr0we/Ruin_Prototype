@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class fireball_behave : MonoBehaviour {
+public class Fireball_Behaviour : MonoBehaviour {
 	public float range;
 	public float speed;
 	public float damage;

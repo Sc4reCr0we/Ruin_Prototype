@@ -15,16 +15,19 @@ public class Ability : MonoBehaviour{
 	public bool isReady;
 	public bool isCast;
 	public Transform instance;
+
+	public GameObject playerID;
 	
 	public void setReady(bool ready){
 		isReady = ready;
 	}
 
-	public virtual void cast(GameObject playerID){
-		instanceCreate (playerID);
+	public virtual void cast(GameObject playerID1){
+		playerID = playerID1;
+		Invoke("instanceCreate", casttime);
 	}
 
-	public virtual void instanceCreate(GameObject playerID){
+	public virtual void instanceCreate(){
 		var castedAbility = Instantiate(instance) as Transform;
 		castedAbility.position = playerID.transform.position;
 	}

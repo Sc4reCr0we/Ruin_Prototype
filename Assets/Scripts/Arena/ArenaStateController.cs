@@ -7,20 +7,20 @@ public class ArenaStateController : MonoBehaviour {
 	public float thirdStateChangeTimer;
 	public float colliderRadiusSpeed;
 	public Object electrified;
-
-	private Object electrifiedTemp;
+	
+	private GameObject electrifiedTemp;
 	private bool isState4 = false;
 	private float colliderRadius;
 	private Animator animator;
-	private CircleCollider2D collider;
+	private CircleCollider2D colliderID;
 	private string currentState = "state_1";
 
 	// Use this for initialization
 	void Start () 
 	{
 		animator = GetComponent<Animator>();
-		collider = GetComponent<CircleCollider2D> ();
-		colliderRadius = collider.radius;
+		colliderID = GetComponent<CircleCollider2D> ();
+		colliderRadius = colliderID.radius;
 		Invoke ("isState_2", firstStateChangeTimer);
 		Invoke ("isState_3", secondStateChangeTimer);
 		Invoke ("isState_4", thirdStateChangeTimer);
@@ -30,13 +30,13 @@ public class ArenaStateController : MonoBehaviour {
 	void Update () 
 	{
 		if(currentState == "state_2")
-			collider.radius = Mathf.Lerp (collider.radius, colliderRadius * 0.75f, colliderRadiusSpeed * Time.deltaTime);
+			colliderID.radius = Mathf.Lerp (colliderID.radius, colliderRadius * 0.7f, colliderRadiusSpeed * Time.deltaTime);
 
 		if(currentState == "state_3")
-			collider.radius = Mathf.Lerp (collider.radius, colliderRadius * 0.5f, colliderRadiusSpeed * Time.deltaTime);
+			colliderID.radius = Mathf.Lerp (colliderID.radius, colliderRadius * 0.5f, colliderRadiusSpeed * Time.deltaTime);
 
 		if(currentState == "state_4")
-			collider.radius = Mathf.Lerp (collider.radius, colliderRadius * 0.25f, colliderRadiusSpeed * Time.deltaTime);
+			colliderID.radius = Mathf.Lerp (colliderID.radius, colliderRadius * 0.25f, colliderRadiusSpeed * Time.deltaTime);
 	
 	}
 
@@ -67,7 +67,7 @@ public class ArenaStateController : MonoBehaviour {
 		if (collider.gameObject.tag == "Player")
 		{
 			collider.GetComponent<OutsideArenaDamage>().isOutside = false;
-			if (electrifiedTemp != null)
+			if(electrifiedTemp != null)
 				Destroy (electrifiedTemp);
 		}
 
@@ -78,7 +78,9 @@ public class ArenaStateController : MonoBehaviour {
 		if (collider.gameObject.tag == "Player")
 		{
 			collider.GetComponent<OutsideArenaDamage>().isOutside = true;
-			electrifiedTemp = Instantiate (electrified, collider.transform.position, Quaternion.identity);
+			electrifiedTemp = Instantiate (electrified, collider.transform.position, Quaternion.identity) as GameObject;
+			electrifiedTemp.GetComponent<belowPlayer>().playerObject = collider.gameObject;
+
 		}
 			
 	}
