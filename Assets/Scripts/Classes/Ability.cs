@@ -11,6 +11,7 @@ public class Ability : MonoBehaviour{
 	public float damage;
 	public float pushback;
 	public float pushStack;
+	public Vector3 targetPosition;
 
 	private bool _isReady = true;
 
@@ -27,8 +28,9 @@ public class Ability : MonoBehaviour{
 
 	}
 
-	public virtual void cast(GameObject playerID1){
+	public virtual void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
+		targetPosition = targetPos;
 		Invoke("instanceCreate", casttime);
 	}
 

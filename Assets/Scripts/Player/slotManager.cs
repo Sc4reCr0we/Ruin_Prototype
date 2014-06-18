@@ -20,6 +20,10 @@ public class slotManager : MonoBehaviour {
 	public string SpaceKey = "Spacekey";
 	public string fireAbility = "Mouse1";
 
+	public Vector3 targetPosition;
+	public Transform player2Cursor;
+	public int playerNumber;
+
 	private Ability currentSlot;
 	private Animator animator;
 
@@ -127,7 +131,7 @@ public class slotManager : MonoBehaviour {
 	}
 
 	private void castdelay(){
-		currentSlot.cast(gameObject);
+		currentSlot.cast(gameObject, targetPosition);
 		}
 
 
@@ -138,10 +142,15 @@ public class slotManager : MonoBehaviour {
 		checkCooldown ();
 		if (currentSlot != null) {
 
+
 			if(Input.GetButtonDown(fireAbility) && currentSlot.isReady){
 				setCooldown();
 				currentSlot.setReady(false);
 				animator.SetBool ("casting", true);
+				if(playerNumber == 1)
+					targetPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+				if(playerNumber == 2)
+					targetPosition = player2Cursor.position;
 				Invoke("castdelay",0.2f);
 			}
 

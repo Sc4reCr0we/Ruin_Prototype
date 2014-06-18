@@ -182,6 +182,7 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
      <Compile Include="Assets\Scripts\Abilities\Fireball.cs" />
      <Compile Include="Assets\Scripts\Abilities\Gust.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Teleport_Behaviour.cs" />
@@ -191,7 +192,9 @@
      <Compile Include="Assets\Scripts\Arena\ElectricityGenerator.cs" />
      <Compile Include="Assets\Scripts\Arena\ElectricityKiller.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Camera\CustomCursor.cs" />
+     <Compile Include="Assets\Scripts\Camera\ControllerCursor.cs" />
+     <Compile Include="Assets\Scripts\Camera\CustomCursorController.cs" />
+     <Compile Include="Assets\Scripts\Camera\CustomCursorMouse.cs" />
      <Compile Include="Assets\Scripts\Classes\Ability.cs" />
      <Compile Include="Assets\Scripts\GUI\AbilityCooldowns.cs" />
      <Compile Include="Assets\Scripts\GUI\HealthPushbackBar.cs" />

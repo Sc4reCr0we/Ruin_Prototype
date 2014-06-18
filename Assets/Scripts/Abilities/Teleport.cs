@@ -6,14 +6,15 @@ public class Teleport : Ability{
 	private float castTurnSpeed = 100;
 	
 	
-	public override void cast(GameObject playerID1){
+	public override void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
+		targetPosition = targetPos;
 		Invoke ("instanceCreate", casttime);
 	}
 	
 	public override void instanceCreate(){
 		Vector3 currentPosition = playerID.transform.position;
-		Vector3 mousePos 		= Camera.main.ScreenToWorldPoint( Input.mousePosition );
+		Vector3 mousePos 		= targetPosition;
 		Vector3 teleportDir		= mousePos - currentPosition;
 		teleportDir.z 			= 0;
 		teleportDir.Normalize ();
