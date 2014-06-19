@@ -9,10 +9,20 @@ public class slotManager : MonoBehaviour {
 	public Ability Spc_slot;
 	private int slotNumb;
 
-	private float Q_cooldown = 0;
-	private float E_cooldown = 0;
-	private float R_cooldown = 0;
-	private float Spc_cooldown = 0;
+	public float Q_cooldown = 0;
+	public float E_cooldown = 0;
+	public float R_cooldown = 0;
+	public float Spc_cooldown = 0;
+
+	public string QKey = "Qkey";
+	public string EKey = "Ekey";
+	public string RKey = "Rkey";
+	public string SpaceKey = "Spacekey";
+	public string fireAbility = "Mouse1";
+
+	public Vector3 targetPosition;
+	public Transform player2Cursor;
+	public int playerNumber;
 
 	private Ability currentSlot;
 	private Animator animator;
@@ -85,10 +95,10 @@ public class slotManager : MonoBehaviour {
 
 	private void setActiveSlot(){
 		// Check each button for press and set the current slot correspondingly
-		bool Q_shoot = Input.GetButtonDown("Qkey");
-		bool E_shoot = Input.GetButtonDown("Ekey");
-		bool R_shoot = Input.GetButtonDown("Rkey");
-		bool Spc_shoot = Input.GetButtonDown("Space");
+		bool Q_shoot = Input.GetButtonDown(QKey) || Input.GetAxis (QKey) > 0f;
+		bool E_shoot = Input.GetButtonDown(EKey) || Input.GetAxis (EKey) > 0f;
+		bool R_shoot = Input.GetButtonDown(RKey) || Input.GetAxis (RKey) > 0f;
+		bool Spc_shoot = Input.GetButtonDown(SpaceKey) || Input.GetAxis (SpaceKey) > 0f;
 		
 		if(R_shoot == true){
 			slotNumb = 1;
@@ -121,7 +131,7 @@ public class slotManager : MonoBehaviour {
 	}
 
 	private void castdelay(){
-		currentSlot.cast(gameObject);
+		currentSlot.cast(gameObject, targetPosition);
 		}
 
 
@@ -132,10 +142,15 @@ public class slotManager : MonoBehaviour {
 		checkCooldown ();
 		if (currentSlot != null) {
 
-			if(Input.GetButtonDown("Fire1") && currentSlot.isReady){
+
+			if(Input.GetButtonDown(fireAbility) && currentSlot.isReady){
 				setCooldown();
 				currentSlot.setReady(false);
 				animator.SetBool ("casting", true);
+				if(playerNumber == 1)
+					targetPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+				if(playerNumber == 2)
+					targetPosition = player2Cursor.position;
 				Invoke("castdelay",0.2f);
 			}
 
