@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 		
 	public float speed;
+	private float maxSpeed;
 	public float turnSpeed;
 	public int playerNumber = 1;
 	private Animator animator;
@@ -15,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void Start ()
 	{
+		maxSpeed = speed;
 		if(playerNumber == 1)
 		{
 			horizontalInput = "Horizontal_Player1";
@@ -116,6 +118,24 @@ public class PlayerMovement : MonoBehaviour {
 	public void castingEnd2()
 	{
 		canMove = true;
+	}
+
+	public void stopMoving()
+	{
+		canMove = false;
+	}
+
+	public void slowDown(float amount, float time)
+	{
+		amount /= 100f;
+		speed -= speed * amount;
+		Invoke ("setSpeedNormal", time);
+		
+	}
+
+	public void setSpeedNormal()
+	{
+		speed = maxSpeed;
 	}
 
 	public void setPushedback(float dist){

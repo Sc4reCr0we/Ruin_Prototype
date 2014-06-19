@@ -4,11 +4,13 @@ using System.Collections;
 public class Scatter : Ability{
 	
 	private float castTurnSpeed = 100;
-	public float angleBetweenProjectiles = -10;
-	public float timeBetweenProjectiles = 5f;
+	public float angleBetweenProjectiles = -5;
+	public float timeBetweenProjectiles = 2000f;
 	public int numberOfProjectiles = 7;
+	public float slowBy;
+	public float slowTime;
 
-	private int projectileNumber = 0;
+	private int projectileNumber = 1;
 	private float currentAngle; 
 	
 	
@@ -26,30 +28,35 @@ public class Scatter : Ability{
 		scatterDir.z 			= 0;
 		scatterDir.Normalize ();
 		float angle 			= Mathf.Atan2 (scatterDir.y, scatterDir.x) * Mathf.Rad2Deg;
-		angle -= angleBetweenProjectiles;
+		angle -= currentAngle;
 		Vector2 v = (new Vector2 (Mathf.Cos (angle * Mathf.Deg2Rad), Mathf.Sin (angle * Mathf.Deg2Rad)));
 		scatterDir.x = v.x;
 		scatterDir.y = v.y;
 		
-		var fireballID 					= Instantiate (instance, currentPosition + scatterDir/2, Quaternion.identity) as Transform ;
-		fireballID.GetComponent<Fireball_Behaviour> ().onCast (scatterDir,speed,angle,range);
-		fireballID.GetComponent<Fireball_Behaviour> ().speed = speed;
-		fireballID.GetComponent<Fireball_Behaviour> ().damage = damage;
-		fireballID.GetComponent<Fireball_Behaviour> ().range = range;
-		fireballID.GetComponent<Fireball_Behaviour> ().pushStack = pushStack;
-		fireballID.GetComponent<Fireball_Behaviour> ().pushback = pushback;
+		var ScatterID 					= Instantiate (instance, currentPosition + scatterDir/2, Quaternion.identity) as Transform ;
+		ScatterID .GetComponent<Scatter_Behaviour> ().onCast (scatterDir,speed,angle,range);
+		ScatterID .GetComponent<Scatter_Behaviour> ().speed = speed;
+		ScatterID .GetComponent<Scatter_Behaviour> ().damage = damage;
+		ScatterID .GetComponent<Scatter_Behaviour> ().range = range;
+		ScatterID .GetComponent<Scatter_Behaviour> ().pushStack = pushStack;
+		ScatterID .GetComponent<Scatter_Behaviour> ().pushback = pushback;
+		ScatterID .GetComponent<Scatter_Behaviour> ().slowBy = slowBy;
+		ScatterID .GetComponent<Scatter_Behaviour> ().slowTime = slowTime;
 
 		if(projectileNumber < numberOfProjectiles)
 		{	
 			projectileNumber += 1;
 			currentAngle -= angleBetweenProjectiles;
-			Invoke ("castAgain", timeBetweenProjectiles);
+			//StartCoroutine(multipleCast());
+			Invoke ("instanceCreate", timeBetweenProjectiles);
+			playerID.GetComponent<PlayerMovement> ().stopMoving ();
 		}
 
 		else
 		{
 			projectileNumber = 0;
-			currentAngle = angleBetweenProjectiles;
+			currentAngle = angleBetweenProjectiles * (numberOfProjectiles / 2f - 0.5f);
+			playerID.GetComponent<PlayerMovement> ().castingEnd();
 		}
 		
 		
@@ -67,7 +74,7 @@ public class Scatter : Ability{
 	}
 
 	void Start() {
-		currentAngle = angleBetweenProjectiles;
+		currentAngle = angleBetweenProjectiles * (numberOfProjectiles / 2f - 0.5f);
 	}
 	// Update is called once per frame
 	void Update () {

@@ -13,7 +13,7 @@ public class CustomCursorMouse : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUI.DrawTexture (new Rect(Input.mousePosition.x-cursorSizeX/2, (Screen.height-Input.mousePosition.y)-cursorSizeY/2, cursorSizeX, cursorSizeY),myCursor);
+		GUI.DrawTexture (new Rect(Input.mousePosition.x, (Screen.height-Input.mousePosition.y), cursorSizeX, cursorSizeY),myCursor);
 	}
 
 
