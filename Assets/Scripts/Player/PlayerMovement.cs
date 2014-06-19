@@ -35,38 +35,8 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 direction = new Vector3(0,0,0);
-		
-		//Left
-		
-		/*if (Input.GetKey ("a"))
-		{
-			direction -= Vector3.right;
-		}
-		
-		//Right 
-		if(Input.GetKey("d"))
-		{
-			direction += Vector3.right;
-		}
-		
-		//Up
-		
-		if (Input.GetKey ("w"))
-		{
-			direction += Vector3.up;     
-		}
-		
-		//Down
-		
-		if(Input.GetKey ("s"))
-		{
-			direction -= Vector3.up;
-		}
-		*/
-
-
-			direction.x += Input.GetAxis (horizontalInput);
-			direction.y += Input.GetAxis (verticalInput);
+		direction.x 	 += Input.GetAxis (horizontalInput);
+		direction.y 	 += Input.GetAxis (verticalInput);
 
 
 

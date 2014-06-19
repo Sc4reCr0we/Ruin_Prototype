@@ -45,7 +45,7 @@ public class Fireball_Behaviour : MonoBehaviour {
 		}
 		if (other != null && other.gameObject.tag== "Ability") {
 			SpecialEffectsHelper.Instance.Explosion(transform.position);
-			Destroy (other.gameObject);
+			Destroy(other.gameObject);
 			Destroy (gameObject);
 		}
 
