@@ -180,10 +180,12 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Execute.cs" />
      <Compile Include="Assets\Scripts\Abilities\Fireball.cs" />
      <Compile Include="Assets\Scripts\Abilities\Gust.cs" />
      <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Scatter_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Teleport_Behaviour.cs" />
