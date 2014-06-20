@@ -14,6 +14,7 @@ public class SpecialEffectsHelper : MonoBehaviour
 	public ParticleSystem fireEffect;
 	public ParticleSystem iceEffect;
 	public ParticleSystem windEffect;
+	public ParticleSystem empEffect;
 	
 	void Awake()
 	{
@@ -51,6 +52,12 @@ public class SpecialEffectsHelper : MonoBehaviour
 	{
 		
 		instantiate(windEffect, position);
+	}
+
+	public void Emp(Vector3 position)
+	{
+		
+		instantiate(empEffect, position);
 	}
 	
 	/// <summary>
