@@ -12,6 +12,7 @@ public class Ability : MonoBehaviour{
 	public float pushback;
 	public float pushStack;
 	public Vector3 targetPosition;
+	public bool smartCast = false;
 
 	private bool _isReady = true;
 

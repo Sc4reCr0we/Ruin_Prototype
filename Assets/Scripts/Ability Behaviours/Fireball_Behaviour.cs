@@ -51,7 +51,10 @@ public class Fireball_Behaviour : MonoBehaviour {
 
 		if (other != null && other.gameObject.tag == "Destructable") {
 			SpecialEffectsHelper.Instance.Explosion(transform.position);
+			if(other.gameObject.GetComponent<HealthScript>()!= null)
 			other.gameObject.GetComponent<HealthScriptDestruct>().setHealth(damage);
+			else if(other.gameObject.GetComponent<Wall_Behaviour>()!= null)
+			other.gameObject.GetComponent<Wall_Behaviour>().setHealth(damage);
 			Destroy (gameObject);
 		}
 	}

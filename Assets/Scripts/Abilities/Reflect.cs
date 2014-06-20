@@ -6,7 +6,6 @@ public class Reflect : Ability{
 	private float castTurnSpeed = 100;
 	public float duration = 3; 
 	
-	
 	public override void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
 		targetPosition = targetPos;
