@@ -220,10 +220,7 @@ public class slotManager : MonoBehaviour {
 				if(playerNumber == 2)
 					targetPosition = player2Cursor.position;
 				castdelay();
-<<<<<<< HEAD
-=======
 
->>>>>>> 5645b4588faddc26a3288823d1135a4a15947752
 			}
 
 		}
