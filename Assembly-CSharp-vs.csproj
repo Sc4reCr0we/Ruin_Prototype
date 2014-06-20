@@ -252,11 +252,15 @@
      <Compile Include="Assets\Scripts\Abilities\Reflect.cs" />
      <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Wall.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour2.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Reflect_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Scatter_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Teleport_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Wall_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Arena\ArenaStateController.cs" />
      <Compile Include="Assets\Scripts\Arena\Destructable\Arena1\HealthScriptDestruct.cs" />
      <Compile Include="Assets\Scripts\Arena\Destructable\Arena1\energyballScript.cs" />
@@ -279,6 +283,7 @@
      <Compile Include="Assets\Scripts\Player\PushbackScript.cs" />
      <Compile Include="Assets\Scripts\Player\belowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\slotManager.cs" />
+     <Compile Include="Assets\Scripts\Player\stateController.cs" />
      <Compile Include="Assets\Scripts\Sound\AlterSoundPlay.cs" />
      <Compile Include="Assets\Scripts\Sound\PlayOneShot.cs" />
      <Compile Include="Assets\Scripts\SpecialEffectsHelper.cs" />

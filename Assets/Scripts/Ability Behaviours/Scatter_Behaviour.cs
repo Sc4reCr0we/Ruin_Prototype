@@ -16,7 +16,7 @@ public class Scatter_Behaviour : MonoBehaviour {
 	}
 	
 	void killMe(){
-		SpecialEffectsHelper.Instance.Explosion(transform.position);
+		SpecialEffectsHelper.Instance.Ice(transform.position);
 		Destroy (gameObject);
 	}
 	
@@ -39,7 +39,7 @@ public class Scatter_Behaviour : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 		
 		if (other != null && other.gameObject.tag== "Player") {
-			SpecialEffectsHelper.Instance.Explosion(transform.position);
+			SpecialEffectsHelper.Instance.Ice(transform.position);
 			other.gameObject.GetComponent<HealthScript> ().setHealth (damage);
 			//other.gameObject.GetComponent<PushbackScript> ().pushPlayer (other.contacts[0].point,pushback,pushStack,transform);
 			other.gameObject.GetComponent<PlayerMovement>().slowDown(slowBy,slowTime);
@@ -47,13 +47,13 @@ public class Scatter_Behaviour : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		if (other != null && other.gameObject.tag== "Ability") {
-			SpecialEffectsHelper.Instance.Explosion(transform.position);
+			SpecialEffectsHelper.Instance.Ice(transform.position);
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 		}
 		
 		if (other != null && other.gameObject.tag == "Destructable") {
-			SpecialEffectsHelper.Instance.Explosion(transform.position);
+			SpecialEffectsHelper.Instance.Ice(transform.position);
 			other.gameObject.GetComponent<HealthScriptDestruct>().setHealth(damage);
 			Destroy (gameObject);
 		}
