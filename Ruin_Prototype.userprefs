@@ -1,32 +1,12 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ability Behaviours\Gust_Behaviour2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\slotManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="182" Column="65" />
-      <File FileName="Assets\Scripts\Abilities\Gust.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\Gust_Behaviour2.cs" Line="49" Column="27" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\CameraMovementDennis.cs">
-    <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\Sound\AlterSoundPlay.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Sound\PlayOneShot.cs" Line="11" Column="3" />
+      <File FileName="Assets\Scripts\Sound\AlterSoundPlay.cs" Line="99" Column="1" />
+      <File FileName="Assets\Scripts\Sound\PlayOneShot.cs" Line="1" Column="1" />
       <File FileName="..\Hellbound\Assets\Scripts\Puzzle\CubeKeyPuzzle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\CameraMovementDennis.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets\Scripts\Abilities\Reflect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Abilities\Execute.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI\AbilityCooldowns.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameController\InstantiateGame.cs" Line="25" Column="29" />
-      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="150" Column="63" />
-      <File FileName="Assets\Scripts\Camera\CustomCursorController.cs" Line="23" Column="71" />
-      <File FileName="Assets\Scripts\Camera\ControllerCursor.cs" Line="24" Column="29" />
->>>>>>> 9942a5dade9ee124148354281f4dc56f20edf0c4
->>>>>>> d1ce6b75f8d4cf70145318f158b38c168955909d
+      <File FileName="Assets\Scripts\Camera\CameraMovementDennis.cs" Line="17" Column="58" />
+      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="229" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
