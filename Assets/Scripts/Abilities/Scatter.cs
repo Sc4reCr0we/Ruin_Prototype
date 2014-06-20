@@ -33,7 +33,7 @@ public class Scatter : Ability{
 		scatterDir.x = v.x;
 		scatterDir.y = v.y;
 		
-		var ScatterID 					= Instantiate (instance, currentPosition + scatterDir/2, Quaternion.identity) as Transform ;
+		var ScatterID 					= Instantiate (instance, currentPosition + scatterDir, Quaternion.identity) as Transform ;
 		ScatterID .GetComponent<Scatter_Behaviour> ().onCast (scatterDir,speed,angle,range);
 		ScatterID .GetComponent<Scatter_Behaviour> ().speed = speed;
 		ScatterID .GetComponent<Scatter_Behaviour> ().damage = damage;

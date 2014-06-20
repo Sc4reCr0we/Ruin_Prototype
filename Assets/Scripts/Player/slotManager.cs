@@ -192,10 +192,15 @@ public class slotManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		//Smartcast for controller, fullösning
+
+
+
 		setActiveSlot ();
 		cooldownCount ();
 		checkCooldown ();
 		if (currentSlot != null) {
+<<<<<<< HEAD
 			if(Input.GetButtonDown(fireAbility) && currentSlot.isReady && canCast){
 				currentSlot.setReady(false);
 				setCooldown();
@@ -209,13 +214,23 @@ public class slotManager : MonoBehaviour {
 			else if (currentSlot.smartCast && isSmartCast && currentSlot.isReady && canCast){
 				currentSlot.setReady(false);
 				isSmartCast = false;
+=======
+
+
+			if(currentSlot.isReady && Input.GetButtonDown(fireAbility)){
+				currentSlot.setReady(false);
+>>>>>>> 9942a5dade9ee124148354281f4dc56f20edf0c4
 				setCooldown();
 				animator.SetBool ("casting", true);
 				if(playerNumber == 1)
 					targetPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
 				if(playerNumber == 2)
 					targetPosition = player2Cursor.position;
+<<<<<<< HEAD
 				castdelay();
+=======
+				castdelay ();
+>>>>>>> 9942a5dade9ee124148354281f4dc56f20edf0c4
 			}
 
 		}

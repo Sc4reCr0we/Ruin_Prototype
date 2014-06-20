@@ -20,6 +20,9 @@ public class InstantiateGame : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if(player1.GetComponent<HealthScript>().health <= 0 || player2.GetComponent<HealthScript>().health <= 0)
+		{
+			Application.LoadLevel(0);
+		}
 	}
 }

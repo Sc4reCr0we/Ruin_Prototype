@@ -26,7 +26,7 @@ public class Reflect_Behaviour : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if (other != null && other.gameObject.tag== "Ability") {
+		if (other != null && other.gameObject.tag== "Ability" && other.gameObject != myCaster) {
 			other.gameObject.rigidbody2D.velocity *= -1;
 			other.gameObject.transform.rotation = Quaternion.Inverse(other.gameObject.transform.rotation);
 
