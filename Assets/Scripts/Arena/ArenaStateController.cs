@@ -30,7 +30,7 @@ public class ArenaStateController : MonoBehaviour {
 	void Update () 
 	{
 		if(currentState == "state_2")
-			colliderID.radius = Mathf.Lerp (colliderID.radius, colliderRadius * 0.7f, colliderRadiusSpeed * Time.deltaTime);
+			colliderID.radius = Mathf.Lerp (colliderID.radius, 1.1f, colliderRadiusSpeed * Time.deltaTime);
 
 		if(currentState == "state_3")
 			colliderID.radius = Mathf.Lerp (colliderID.radius, colliderRadius * 0.5f, colliderRadiusSpeed * Time.deltaTime);
