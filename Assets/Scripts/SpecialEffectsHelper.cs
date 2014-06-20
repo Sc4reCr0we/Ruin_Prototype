@@ -12,6 +12,9 @@ public class SpecialEffectsHelper : MonoBehaviour
 	
 	public ParticleSystem smokeEffect;
 	public ParticleSystem fireEffect;
+	public ParticleSystem iceEffect;
+	public ParticleSystem windEffect;
+	public ParticleSystem empEffect;
 	
 	void Awake()
 	{
@@ -37,6 +40,24 @@ public class SpecialEffectsHelper : MonoBehaviour
 		
 		// Fire in the sky
 		instantiate(fireEffect, position);
+	}
+
+	public void Ice(Vector3 position)
+	{
+
+		instantiate(iceEffect, position);
+	}
+
+	public void Wind(Vector3 position)
+	{
+		
+		instantiate(windEffect, position);
+	}
+
+	public void Emp(Vector3 position)
+	{
+		
+		instantiate(empEffect, position);
 	}
 	
 	/// <summary>

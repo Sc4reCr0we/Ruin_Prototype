@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;FMOD_LIVEUPDATE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FT_FreeSample\Script\Button.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -253,19 +254,24 @@
      <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
      <Compile Include="Assets\Scripts\Abilities\SmileyBomb.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Wall.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour2.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Reflect_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Scatter_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\SmileyBombExplosion_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\SmileyBomb_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Teleport_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Wall_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Arena\ArenaStateController.cs" />
      <Compile Include="Assets\Scripts\Arena\Destructable\Arena1\HealthScriptDestruct.cs" />
      <Compile Include="Assets\Scripts\Arena\Destructable\Arena1\energyballScript.cs" />
      <Compile Include="Assets\Scripts\Arena\ElectricityGenerator.cs" />
      <Compile Include="Assets\Scripts\Arena\ElectricityKiller.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraMovementDennis.cs" />
      <Compile Include="Assets\Scripts\Camera\ControllerCursor.cs" />
      <Compile Include="Assets\Scripts\Camera\CustomCursorController.cs" />
      <Compile Include="Assets\Scripts\Camera\CustomCursorMouse.cs" />
@@ -281,6 +287,9 @@
      <Compile Include="Assets\Scripts\Player\PushbackScript.cs" />
      <Compile Include="Assets\Scripts\Player\belowPlayer.cs" />
      <Compile Include="Assets\Scripts\Player\slotManager.cs" />
+     <Compile Include="Assets\Scripts\Player\stateController.cs" />
+     <Compile Include="Assets\Scripts\Sound\AlterSoundPlay.cs" />
+     <Compile Include="Assets\Scripts\Sound\PlayOneShot.cs" />
      <Compile Include="Assets\Scripts\SpecialEffectsHelper.cs" />
      <Compile Include="Assets\Scripts\shotScript.cs" />
      <Compile Include="Assets\Scripts\sortingLayer.cs" />
@@ -315,6 +324,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\StreamingAssets\FMOD_bank_list.txt" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
@@ -326,6 +336,10 @@
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Helge/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{19D36A88-7135-575B-BE2F-5EF1E4466F97}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
