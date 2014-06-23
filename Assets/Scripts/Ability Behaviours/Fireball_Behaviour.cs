@@ -7,10 +7,13 @@ public class Fireball_Behaviour : MonoBehaviour {
 	public float damage;
 	public float pushback;
 	public float pushStack;
+	
+	private Vector2 dirTemp;
+	private float angle;
 
 	// Use this for initializationd
 	void Start () {
-	
+
 	}
 
 	void killMe(){
@@ -19,7 +22,21 @@ public class Fireball_Behaviour : MonoBehaviour {
 	}
 	
 	// Update is called once per framee
-	void Update () {
+	void Update () 
+	{
+
+		if(rigidbody2D.velocity != Vector2.zero)
+		{
+			dirTemp = rigidbody2D.velocity;
+			dirTemp.Normalize ();
+			angle = Mathf.Atan2 (dirTemp.y, dirTemp.x) * Mathf.Rad2Deg;
+
+			gameObject.transform.rotation =
+				Quaternion.Slerp (transform.rotation,
+				                  Quaternion.Euler (0, 0, angle),
+				                  100f * Time.deltaTime);
+		}
+
 
 	}
 
@@ -51,7 +68,7 @@ public class Fireball_Behaviour : MonoBehaviour {
 
 		if (other != null && other.gameObject.tag == "Destructable") {
 			SpecialEffectsHelper.Instance.Explosion(transform.position);
-			if(other.gameObject.GetComponent<HealthScript>()!= null)
+			if(other.gameObject.GetComponent<HealthScriptDestruct>()!= null)
 			other.gameObject.GetComponent<HealthScriptDestruct>().setHealth(damage);
 			else if(other.gameObject.GetComponent<Wall_Behaviour>()!= null)
 			other.gameObject.GetComponent<Wall_Behaviour>().setHealth(damage);

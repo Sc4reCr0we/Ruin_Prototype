@@ -29,13 +29,11 @@ public class energyballScript : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter2D (Collision2D other){
-		if (other != null) {
-
-			if (other.gameObject.tag== "Ability") {
-				other.gameObject.rigidbody2D.velocity *= -1;
-			}
-
+	void OnTriggerEnter2D(Collider2D other){
+		if (other != null && other.gameObject.tag== "Ability") {
+			other.gameObject.rigidbody2D.velocity *= -1;
+			
 		}
+		
 	}
 }
