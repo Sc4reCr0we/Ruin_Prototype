@@ -5,6 +5,7 @@ public class SmileyBomb : Ability{
 
 	public float timer;
 	public float explTimer;
+	public float stunDuration;
 	private float castTurnSpeed = 100;
 	
 	
@@ -21,6 +22,7 @@ public class SmileyBomb : Ability{
 		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().onCast (timer);
 		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().damage = damage;
 		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().pushStack = pushStack;
+		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().stunDuration = stunDuration;
 		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().pushback = pushback;
 		smileyBombID.GetComponent<SmileyBomb_Behaviour> ().explTimer = explTimer;
 		/*

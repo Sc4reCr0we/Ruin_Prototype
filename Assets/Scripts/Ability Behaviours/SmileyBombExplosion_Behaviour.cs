@@ -6,6 +6,7 @@ public class SmileyBombExplosion_Behaviour : MonoBehaviour {
 	public float pushback;
 	public float pushStack;
 	private float colliderRadius;
+	public float stunDuration;
 
 
 	// Use this for initialization
@@ -26,8 +27,8 @@ public class SmileyBombExplosion_Behaviour : MonoBehaviour {
 		
 		if (other != null && other.gameObject.tag== "Player") {
 			SpecialEffectsHelper.Instance.Explosion(transform.position);
+			other.gameObject.GetComponent<stateController> ().setStun (stunDuration);
 			other.gameObject.GetComponent<HealthScript> ().setHealth (damage);
-			Debug.Log("Player Hit");
 			//other.gameObject.GetComponent<PushbackScript> ().pushPlayer (other.contacts[0].point,pushback,pushStack,transform);
 		}
 		if (other != null && other.gameObject.tag== "Ability") {

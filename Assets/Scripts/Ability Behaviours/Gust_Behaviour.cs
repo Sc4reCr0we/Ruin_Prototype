@@ -11,6 +11,7 @@ public class Gust_Behaviour : MonoBehaviour {
 	public Transform instance;
 	public float angle;
 	public float charge = 0f;
+	public bool smartCast = false;
 
 	private float MaxChargeTime;
 	private float MaxCharge = 1;
@@ -48,9 +49,10 @@ public class Gust_Behaviour : MonoBehaviour {
 		}
 	}
 
-	public void onCast (float maximumChargeTime ) {
+	public void onCast (float maximumChargeTime, bool smartcast ) {
 		MaxChargeTime = maximumChargeTime;
 		chargePerSec = MaxCharge / MaxChargeTime;
+		smartCast = smartcast;
 	}
 
 	public void instanceCreate(){

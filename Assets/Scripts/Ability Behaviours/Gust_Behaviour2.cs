@@ -8,6 +8,9 @@ public class Gust_Behaviour2 : MonoBehaviour {
 	public float pushback;
 	public float pushStack;
 	public GameObject playerID;
+
+	private Vector2 dirTemp;
+	private float angle;
 	// Use this for initializationd
 	void Start () {
 	
@@ -20,6 +23,18 @@ public class Gust_Behaviour2 : MonoBehaviour {
 	
 	// Update is called once per framee
 	void Update () {
+
+		if(rigidbody2D.velocity != Vector2.zero)
+		{
+			dirTemp = rigidbody2D.velocity;
+			dirTemp.Normalize ();
+			angle = Mathf.Atan2 (dirTemp.y, dirTemp.x) * Mathf.Rad2Deg;
+			
+			gameObject.transform.rotation =
+				Quaternion.Slerp (transform.rotation,
+				                  Quaternion.Euler (0, 0, angle),
+				                  100f * Time.deltaTime);
+		}
 
 	}
 
@@ -46,7 +61,7 @@ public class Gust_Behaviour2 : MonoBehaviour {
 		if (other != null && other.gameObject.tag== "Ability") {
 			SpecialEffectsHelper.Instance.Wind(transform.position);
 			Destroy(other.gameObject);
-			//Destroy (gameObject);
+			Destroy (gameObject);
 		}
 
 		if (other != null && other.gameObject.tag == "Destructable") {

@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\slotManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\stateController.cs">
     <Files>
-      <File FileName="Assets\Plugins\FMOD\FMOD_StudioSystem.cs" Line="197" Column="49" />
-      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="84" Column="4" />
+      <File FileName="Assets\Scripts\Player\stateController.cs" Line="32" Column="35" />
+      <File FileName="Assets\Scripts\Player\stateController.cs" Line="76" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

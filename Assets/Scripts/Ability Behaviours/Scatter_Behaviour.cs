@@ -9,6 +9,9 @@ public class Scatter_Behaviour : MonoBehaviour {
 	public float pushStack;
 	public float slowBy;
 	public float slowTime;
+
+	private Vector2 dirTemp;
+	private float angle;
 	
 	// Use this for initializationd
 	void Start () {
@@ -22,6 +25,18 @@ public class Scatter_Behaviour : MonoBehaviour {
 	
 	// Update is called once per framee
 	void Update () {
+
+		if(rigidbody2D.velocity != Vector2.zero)
+		{
+			dirTemp = rigidbody2D.velocity;
+			dirTemp.Normalize ();
+			angle = Mathf.Atan2 (dirTemp.y, dirTemp.x) * Mathf.Rad2Deg;
+			
+			gameObject.transform.rotation =
+				Quaternion.Slerp (transform.rotation,
+				                  Quaternion.Euler (0, 0, angle),
+				                  100f * Time.deltaTime);
+		}
 		
 	}
 	
@@ -41,8 +56,7 @@ public class Scatter_Behaviour : MonoBehaviour {
 		if (other != null && other.gameObject.tag== "Player") {
 			SpecialEffectsHelper.Instance.Ice(transform.position);
 			other.gameObject.GetComponent<HealthScript> ().setHealth (damage);
-			//other.gameObject.GetComponent<PushbackScript> ().pushPlayer (other.contacts[0].point,pushback,pushStack,transform);
-			other.gameObject.GetComponent<PlayerMovement>().slowDown(slowBy,slowTime);
+			other.gameObject.GetComponent<stateController>().setSlow(slowTime,slowBy);
 			
 			Destroy (gameObject);
 		}

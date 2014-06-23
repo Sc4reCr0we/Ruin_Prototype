@@ -8,7 +8,7 @@ public class Gust : Ability{
 	public override void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
 		targetPosition = targetPos;
-		playerID.GetComponent<PlayerMovement> ().slowDown (100, casttime);
+		playerID.GetComponent<stateController> ().setSlow (casttime,100);
 		Invoke ("instanceCreate", casttime);
 	}
 	
@@ -22,7 +22,7 @@ public class Gust : Ability{
 		float angle 					= Mathf.Atan2 (gustDir.y, gustDir.x) * Mathf.Rad2Deg;
 		var gustID 					= Instantiate (instance, currentPosition + gustDir/2, Quaternion.identity) as Transform ;
 
-		gustID.GetComponent<Gust_Behaviour> ().onCast (MaxChargeTime);
+		gustID.GetComponent<Gust_Behaviour> ().onCast (MaxChargeTime,smartCast);
 		gustID.GetComponent<Gust_Behaviour> ().speed = speed;
 		gustID.GetComponent<Gust_Behaviour> ().damage = damage;
 		gustID.GetComponent<Gust_Behaviour> ().range = range;
