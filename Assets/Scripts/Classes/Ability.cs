@@ -13,6 +13,7 @@ public class Ability : MonoBehaviour{
 	public float pushStack;
 	public Vector3 targetPosition;
 	public bool smartCast = false;
+	public Sprite iconSprite;
 
 	private bool _isReady = true;
 
