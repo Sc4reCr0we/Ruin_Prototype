@@ -9,6 +9,9 @@ public class Scatter_Behaviour : MonoBehaviour {
 	public float pushStack;
 	public float slowBy;
 	public float slowTime;
+
+	private Vector2 dirTemp;
+	private float angle;
 	
 	// Use this for initializationd
 	void Start () {
@@ -22,6 +25,18 @@ public class Scatter_Behaviour : MonoBehaviour {
 	
 	// Update is called once per framee
 	void Update () {
+
+		if(rigidbody2D.velocity != Vector2.zero)
+		{
+			dirTemp = rigidbody2D.velocity;
+			dirTemp.Normalize ();
+			angle = Mathf.Atan2 (dirTemp.y, dirTemp.x) * Mathf.Rad2Deg;
+			
+			gameObject.transform.rotation =
+				Quaternion.Slerp (transform.rotation,
+				                  Quaternion.Euler (0, 0, angle),
+				                  100f * Time.deltaTime);
+		}
 		
 	}
 	

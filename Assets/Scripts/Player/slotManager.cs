@@ -108,11 +108,11 @@ public class slotManager : MonoBehaviour {
 
 	private bool gamepadDown(string button){
 		if(Input.GetAxis (button) > 0.5f){
-			Debug.Log ("Key-true: " + button);
+
 			return true;
 		}
 		else if (Input.GetAxis (button) < 0.5f){
-			Debug.Log ("Key-false: " + button);
+
 			isSmartCast = false;
 			return false;
 		}
