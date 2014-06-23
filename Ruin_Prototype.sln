@@ -7,6 +7,8 @@ Project("{DEFE865D-AD3F-63BA-31EC-F9F7D96C4E73}") = "Ruin_Prototype", "Assembly-
 EndProject
 Project("{DEFE865D-AD3F-63BA-31EC-F9F7D96C4E73}") = "Ruin_Prototype", "Assembly-CSharp-Editor.csproj", "{C06A1F0C-B3DF-410A-AE3F-C46A1DEF06EA}"
 EndProject
+Project("{DEFE865D-AD3F-63BA-31EC-F9F7D96C4E73}") = "Ruin_Prototype", "Assembly-UnityScript.unityproj", "{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,18 @@ Global
 		{C06A1F0C-B3DF-410A-AE3F-C46A1DEF06EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C06A1F0C-B3DF-410A-AE3F-C46A1DEF06EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C06A1F0C-B3DF-410A-AE3F-C46A1DEF06EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 																																																		GlobalSection(MonoDevelopProperties) = preSolution
+																																																					GlobalSection(MonoDevelopProperties) = preSolution
+																																																												GlobalSection(MonoDevelopProperties) = preSolution
+																																																	GlobalSection(MonoDevelopProperties) = preSolution
 																																																				GlobalSection(MonoDevelopProperties) = preSolution
 																																					GlobalSection(MonoDevelopProperties) = preSolution
 							GlobalSection(MonoDevelopProperties) = preSolution

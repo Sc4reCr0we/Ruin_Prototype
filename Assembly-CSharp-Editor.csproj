@@ -181,10 +181,10 @@
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/denni_000/Documents/GitHub/Ruin_Prototype/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Helge/Documents/GitHub/Ruin_Prototype/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/denni_000/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Helge/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -195,6 +195,8 @@
       <Project>{19D36A88-7135-575B-BE2F-5EF1E4466F97}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2C34DDBA-01A3-03D1-C18C-8368F9B5B4A5}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{E708A81D-A529-6F2A-0F6F-FD35F1A69EC5}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
