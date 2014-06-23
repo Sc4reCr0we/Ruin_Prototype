@@ -56,8 +56,7 @@ public class Scatter_Behaviour : MonoBehaviour {
 		if (other != null && other.gameObject.tag== "Player") {
 			SpecialEffectsHelper.Instance.Ice(transform.position);
 			other.gameObject.GetComponent<HealthScript> ().setHealth (damage);
-			//other.gameObject.GetComponent<PushbackScript> ().pushPlayer (other.contacts[0].point,pushback,pushStack,transform);
-			other.gameObject.GetComponent<PlayerMovement>().slowDown(slowBy,slowTime);
+			other.gameObject.GetComponent<stateController>().setSlow(slowTime,slowBy);
 			
 			Destroy (gameObject);
 		}

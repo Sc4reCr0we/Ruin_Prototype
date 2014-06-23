@@ -95,11 +95,10 @@ public class PlayerMovement : MonoBehaviour {
 		canMove = false;
 	}
 
-	public void slowDown(float amount, float time)
+	public void slowDown(float amount)
 	{
 		amount /= 100f;
 		speed -= speed * amount;
-		Invoke ("setSpeedNormal", time);
 		
 	}
 
