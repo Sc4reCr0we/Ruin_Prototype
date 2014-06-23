@@ -1,14 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ability Behaviours\SmileyBombExplosion_Behaviour.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\stateController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Abilities\SmileyBomb.cs" Line="25" Column="1" />
-      <File FileName="Assets\Scripts\Player\stateController.cs" Line="48" Column="29" />
-      <File FileName="Assets\Scripts\Ability Behaviours\EMP_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Abilities\EMP.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\SmileyBomb_Behaviour.cs" Line="11" Column="8" />
-      <File FileName="Assets\Scripts\Ability Behaviours\SmileyBombExplosion_Behaviour.cs" Line="9" Column="8" />
-      <File FileName="Assets\Scripts\Abilities\SmileyBomb.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\stateController.cs" Line="32" Column="35" />
+      <File FileName="Assets\Scripts\Player\stateController.cs" Line="76" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

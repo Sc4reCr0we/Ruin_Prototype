@@ -7,9 +7,21 @@ public class stateController : MonoBehaviour {
 	public bool isSlowed;
 	public bool isStunned;
 
+	public Object stun;
+	public Object slow;
+	public Object silence;
+
+	private GameObject stunTemp;
+	private GameObject slowTemp;
+	private GameObject silenceTemp;
+
+
+
 	public void setSilence(float duration){
 		isSilenced = true;
 		gameObject.GetComponent<slotManager>().setCanCast(false);
+		silenceTemp = Instantiate (silence, transform.position, Quaternion.identity) as GameObject;
+		silenceTemp.GetComponent<abovePlayer>().playerObject = gameObject;
 		Invoke ("removeSilence", duration);
 		Debug.Log("Player_silenced");
 	}
@@ -25,6 +37,8 @@ public class stateController : MonoBehaviour {
 		isStunned = true;
 		gameObject.GetComponent<slotManager>().setCanCast(false);
 		gameObject.GetComponent<PlayerMovement>().slowDown(100f);
+		stunTemp = Instantiate (stun, transform.position, Quaternion.identity) as GameObject;
+		stunTemp.GetComponent<abovePlayer>().playerObject = gameObject;
 		Invoke ("removeStun", duration);
 		Debug.Log("Player_stun");
 	}
@@ -33,12 +47,14 @@ public class stateController : MonoBehaviour {
 		isStunned = false;
 		gameObject.GetComponent<PlayerMovement>().setSpeedNormal();
 		gameObject.GetComponent<slotManager>().setCanCast(true);
+		Destroy (stunTemp);
 		Debug.Log("Player not stun");
 	}
 
 	public void removeSilence(){
 		isSilenced = false;
 		gameObject.GetComponent<slotManager>().setCanCast(true);
+		Destroy (silenceTemp);
 		Debug.Log("Player not silence");
 	}
 
