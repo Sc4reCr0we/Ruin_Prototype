@@ -247,6 +247,7 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\Scripts\Abilities\EMP.cs" />
      <Compile Include="Assets\Scripts\Abilities\Execute.cs" />
      <Compile Include="Assets\Scripts\Abilities\Fireball.cs" />
      <Compile Include="Assets\Scripts\Abilities\Gust.cs" />
@@ -255,6 +256,7 @@
      <Compile Include="Assets\Scripts\Abilities\SmileyBomb.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
      <Compile Include="Assets\Scripts\Abilities\Wall.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\EMP_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour.cs" />
@@ -334,7 +336,7 @@
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Helge/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Martin/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

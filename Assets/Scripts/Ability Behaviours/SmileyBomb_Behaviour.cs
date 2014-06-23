@@ -8,6 +8,7 @@ public class SmileyBomb_Behaviour : MonoBehaviour {
 	public float pushStack;
 	public GameObject smileyExpl;
 	public float explTimer;
+	public float stunDuration;
 
 	// Use this for initializationd
 	void Start () {
@@ -17,6 +18,7 @@ public class SmileyBomb_Behaviour : MonoBehaviour {
 	void killMe(){
 		GameObject explosionID = Instantiate (smileyExpl, transform.position, Quaternion.identity) as GameObject;
 		explosionID.GetComponent<SmileyBombExplosion_Behaviour> ().damage = damage;
+		explosionID.GetComponent<SmileyBombExplosion_Behaviour> ().stunDuration = stunDuration;
 		explosionID.GetComponent<SmileyBombExplosion_Behaviour> ().pushStack = pushStack;
 		explosionID.GetComponent<SmileyBombExplosion_Behaviour> ().pushback = pushback;
 		explosionID.GetComponent<SmileyBombExplosion_Behaviour> ().setDestroyTimer(explTimer);

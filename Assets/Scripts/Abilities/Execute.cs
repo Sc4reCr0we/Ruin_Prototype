@@ -9,7 +9,7 @@ public class Execute : Ability{
 	public override void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
 		targetPosition = targetPos;
-		playerID.GetComponent<PlayerMovement> ().slowDown (100, casttime);
+		playerID.GetComponent<stateController> ().setSlow (casttime,100);
 		Invoke ("instanceCreate", casttime);
 	}
 	
