@@ -7,7 +7,7 @@ public class PlayOneShot : MonoBehaviour {
 	public bool PlayOnAwake = true;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 	if(PlayOnAwake)
 			FMOD_StudioSystem.instance.PlayOneShot(SoundToBePlayed, transform.position);

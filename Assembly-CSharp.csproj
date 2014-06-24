@@ -297,6 +297,7 @@
      <Compile Include="Assets\Scripts\Player\slotManager.cs" />
      <Compile Include="Assets\Scripts\Player\stateController.cs" />
      <Compile Include="Assets\Scripts\Sound\AlterSoundPlay.cs" />
+     <Compile Include="Assets\Scripts\Sound\ListenerPosition.cs" />
      <Compile Include="Assets\Scripts\Sound\PlayOneShot.cs" />
      <Compile Include="Assets\Scripts\SpecialEffectsHelper.cs" />
      <Compile Include="Assets\Scripts\shotScript.cs" />
@@ -343,6 +344,7 @@
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Martin/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/denni_000/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
