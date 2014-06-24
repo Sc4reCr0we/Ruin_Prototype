@@ -3,7 +3,9 @@ using System.Collections;
 
 public class ListenerPosition : MonoBehaviour {
 
-	public Transform target;
+	public Transform TargetCamera;
+	public float ListenerHeight = +8;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -12,6 +14,6 @@ public class ListenerPosition : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = target.position + new Vector3(0,0, +8);
+		transform.position = TargetCamera.position + new Vector3(0,0, ListenerHeight);
 	}
 }
