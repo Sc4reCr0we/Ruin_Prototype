@@ -14,6 +14,6 @@ public class CameraMovementDennis : MonoBehaviour {
 	void Update () 
 	{
 
-		transform.position = target.position + new Vector3(0,-7, -10);
+		transform.position = target.position + new Vector3(0,0, -10);
 	}
 }

@@ -1,29 +1,10 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Sound\PlayOneShot.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\CameraMovementDennis.cs">
     <Files>
       <File FileName="Assets\Scripts\Sound\PlayOneShot.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ability Behaviours\GrenadeExplosion_Behaviour.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Ability Behaviours\GrenadeExplosion_Behaviour.cs" Line="58" Column="1" />
-      <File FileName="Assets\Scripts\Abilities\Grenade.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\Grenade_Behaviour.cs" Line="30" Column="31" />
-      <File FileName="Assets\Scripts\Abilities\Fireball.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\SmileyBombExplosion_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Ability Behaviours\GrenadeExplosion_Behaviour.cs" Line="16" Column="80" />
-      <File FileName="Assets\Scripts\Ability Behaviours\GrenadeExplosion_child.cs" Line="8" Column="21" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\stateController.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Player\stateController.cs" Line="32" Column="35" />
-      <File FileName="Assets\Scripts\Player\stateController.cs" Line="76" Column="1" />
->>>>>>> 4c54c8959542b0c749f7c00e097401f53bfef19f
->>>>>>> e46ae0513a213cfdb257c9fb60eef2ff381d9859
+      <File FileName="Assets\Scripts\Sound\PlayOneShot.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Camera\CameraMovementDennis.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
