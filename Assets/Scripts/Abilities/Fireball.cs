@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Fireball : Ability{
-
+	
 	private float castTurnSpeed = 100;
 
 

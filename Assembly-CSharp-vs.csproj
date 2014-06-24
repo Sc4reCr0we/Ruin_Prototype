@@ -250,6 +250,7 @@
      <Compile Include="Assets\Scripts\Abilities\EMP.cs" />
      <Compile Include="Assets\Scripts\Abilities\Execute.cs" />
      <Compile Include="Assets\Scripts\Abilities\Fireball.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Grenade.cs" />
      <Compile Include="Assets\Scripts\Abilities\Gust.cs" />
      <Compile Include="Assets\Scripts\Abilities\Reflect.cs" />
      <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
@@ -259,6 +260,9 @@
      <Compile Include="Assets\Scripts\Ability Behaviours\EMP_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Fireball_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\GrenadeExplosion_Behaviour.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\GrenadeExplosion_child.cs" />
+     <Compile Include="Assets\Scripts\Ability Behaviours\Grenade_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Gust_Behaviour2.cs" />
      <Compile Include="Assets\Scripts\Ability Behaviours\Reflect_Behaviour.cs" />
@@ -280,6 +284,7 @@
      <Compile Include="Assets\Scripts\Classes\Ability.cs" />
      <Compile Include="Assets\Scripts\GUI\AbilityCooldowns.cs" />
      <Compile Include="Assets\Scripts\GUI\HealthPushbackBar.cs" />
+     <Compile Include="Assets\Scripts\GUI\setSprite.cs" />
      <Compile Include="Assets\Scripts\GameController\InstantiateGame.cs" />
      <Compile Include="Assets\Scripts\MoveScript.cs" />
      <Compile Include="Assets\Scripts\Player\HealthScript.cs" />
@@ -339,6 +344,7 @@
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/denni_000/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  <HintPath>C:/Users/Martin/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Helge/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
