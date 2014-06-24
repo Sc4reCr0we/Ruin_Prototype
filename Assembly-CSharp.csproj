@@ -297,6 +297,7 @@
      <Compile Include="Assets\Scripts\Player\slotManager.cs" />
      <Compile Include="Assets\Scripts\Player\stateController.cs" />
      <Compile Include="Assets\Scripts\Sound\AlterSoundPlay.cs" />
+     <Compile Include="Assets\Scripts\Sound\ListenerPosition.cs" />
      <Compile Include="Assets\Scripts\Sound\PlayOneShot.cs" />
      <Compile Include="Assets\Scripts\SpecialEffectsHelper.cs" />
      <Compile Include="Assets\Scripts\shotScript.cs" />
