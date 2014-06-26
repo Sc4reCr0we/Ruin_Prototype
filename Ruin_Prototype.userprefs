@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
 <<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\slotManager.cs">
@@ -12,6 +13,17 @@
 =======
   <MonoDevelop.Ide.Workbench />
 >>>>>>> e534ea5a95536bd9e000edad7f1e3b26e0965b3e
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\slotManager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Abilities\Execute.cs" Line="24" Column="51" />
+      <File FileName="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" Line="26" Column="3" />
+      <File FileName="Assets\Scripts\Ability Behaviours\Gust_Behaviour.cs" Line="87" Column="1" />
+      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+>>>>>>> df918274595bc36daaa5789a73e6ec61ed96a71b
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
