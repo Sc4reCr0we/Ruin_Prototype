@@ -9,6 +9,7 @@ public class FMOD_StudioEventEmitter : MonoBehaviour
 	public FMODAsset asset;
 	public string path = "";
 	public bool startEventOnAwake = true;
+	public bool releaseOnDestroy = false;
 
 	FMOD.Studio.EventInstance evt;
 	bool hasStarted = false;
@@ -105,14 +106,19 @@ public class FMOD_StudioEventEmitter : MonoBehaviour
 		FMOD.Studio.UnityUtil.Log("Destroy called");
 		if (evt != null && evt.isValid()) 
 		{
-			if (getPlaybackState () != FMOD.Studio.PLAYBACK_STATE.STOPPED)
-			{
-				FMOD.Studio.UnityUtil.Log("Release evt: " + path);
-				ERRCHECK (evt.stop(FMOD.Studio.STOP_MODE.IMMEDIATE));
-			}
+			if(releaseOnDestroy != true){
+
+				if (getPlaybackState () != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+				{
+					FMOD.Studio.UnityUtil.Log("Release evt: " + path);
+					ERRCHECK (evt.stop(FMOD.Studio.STOP_MODE.IMMEDIATE));
+				}
 			
-			ERRCHECK(evt.release ());
-			evt = null;
+				ERRCHECK(evt.release ());
+				evt = null;
+			}
+			else
+				evt.release();
 		}
 	}
 
