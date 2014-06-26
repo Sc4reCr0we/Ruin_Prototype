@@ -201,22 +201,42 @@ public class slotManager : MonoBehaviour {
 		checkCooldown ();
 		if (currentSlot != null) {
 			if(Input.GetButtonDown(fireAbility) && currentSlot.isReady && canCast){
-				currentSlot.setReady(false);
+				/*currentSlot.setReady(false);
 				setCooldown();
 				animator.SetBool ("casting", true);
 				if(playerNumber == 1)
 					targetPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
 				if(playerNumber == 2)
 					targetPosition = player2Cursor.position;
-				castdelay();
-			}
-			else if (currentSlot.smartCast && isSmartCast && currentSlot.isReady && canCast){
+				castdelay();*/
+				Plane plane = new Plane(Vector3.back, Vector3.one);
+				float rayDistance;
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				plane.Raycast(ray, out rayDistance);
+				
 				currentSlot.setReady(false);
 				isSmartCast = false;
 				setCooldown();
 				animator.SetBool ("casting", true);
 				if(playerNumber == 1)
-					targetPosition = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+					targetPosition = ray.GetPoint(rayDistance);//Camera.main.ScreenToWorldPoint( Input.mousePosition );
+				if(playerNumber == 2)
+					targetPosition = player2Cursor.position;
+				castdelay();
+
+			}
+			else if (currentSlot.smartCast && isSmartCast && currentSlot.isReady && canCast){
+				Plane plane = new Plane(Vector3.back, Vector3.one);
+				float rayDistance;
+				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				plane.Raycast(ray, out rayDistance);
+
+				currentSlot.setReady(false);
+				isSmartCast = false;
+				setCooldown();
+				animator.SetBool ("casting", true);
+				if(playerNumber == 1)
+					targetPosition = ray.GetPoint(rayDistance);//Camera.main.ScreenToWorldPoint( Input.mousePosition );
 				if(playerNumber == 2)
 					targetPosition = player2Cursor.position;
 				castdelay();
