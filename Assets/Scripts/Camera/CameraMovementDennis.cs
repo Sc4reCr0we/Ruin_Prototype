@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraMovementDennis : MonoBehaviour {
 	public Transform target;
+	public int Yoffset = 0;
+	public int Zoffset = -10;
 
 	// Use this for initialization
 	void Start () 
@@ -14,6 +16,6 @@ public class CameraMovementDennis : MonoBehaviour {
 	void Update () 
 	{
 
-		transform.position = target.position + new Vector3(0,0, -10);
+		transform.position = target.position + new Vector3(0,Yoffset, Zoffset);
 	}
 }
