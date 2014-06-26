@@ -7,6 +7,7 @@ public class ControllerCursor : MonoBehaviour {
 	public GameObject player;
 	private Vector3 direction;
 	public Vector3 lastDirection;
+	public bool isFreeTarget = false;
 	// Use this for initialization
 	void Start () {
 
@@ -15,15 +16,28 @@ public class ControllerCursor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-
 		direction = new Vector3 (0, 0, 0);
 		direction.x += Input.GetAxis ("ControllerCursor_Horizontal");
 		direction.y += Input.GetAxis ("ControllerCursor_Vertical");
-		if(direction == Vector3.zero)
-			direction = lastDirection;
-		lastDirection = direction;
-		transform.position = player.transform.position + direction.normalized*range;
 
+		if(isFreeTarget)
+		{
+			direction.Normalize ();
+			rigidbody2D.velocity = direction * sens;
+		}
 
+		else
+		{
+			if(direction == Vector3.zero)
+				direction = lastDirection;
+			lastDirection = direction;
+			transform.position = player.transform.position + direction.normalized*range;
+		}
+
+	}
+
+	public void setFreeTarget(bool isBool)
+	{
+		isFreeTarget = isBool;
 	}
 }

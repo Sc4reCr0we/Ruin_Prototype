@@ -107,11 +107,11 @@ public class slotManager : MonoBehaviour {
 
 
 	private bool gamepadDown(string button){
-		if(Input.GetAxis (button) > 0.5f){
+		if(Input.GetAxis (button) > 0.5f || Input.GetAxis (button) < -0.5f){
 
 			return true;
 		}
-		else if (Input.GetAxis (button) < 0.5f){
+		else if (Input.GetAxis (button) < 0.5f || Input.GetAxis (button) > -0.5f){
 
 			isSmartCast = false;
 			return false;
