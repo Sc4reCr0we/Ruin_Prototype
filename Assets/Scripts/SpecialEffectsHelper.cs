@@ -9,8 +9,7 @@ public class SpecialEffectsHelper : MonoBehaviour
 	/// Singleton
 	/// </summary>
 	public static SpecialEffectsHelper Instance;
-	
-	public ParticleSystem smokeEffect;
+
 	public ParticleSystem fireEffect;
 	public ParticleSystem iceEffect;
 	public ParticleSystem windEffect;
@@ -33,12 +32,7 @@ public class SpecialEffectsHelper : MonoBehaviour
 	/// <param name="position"></param>
 	public void Explosion(Vector3 position)
 	{
-		// Smoke on the water
-		instantiate(smokeEffect, position);
-		
-		// Tu tu tu, tu tu tudu
-		
-		// Fire in the sky
+
 		instantiate(fireEffect, position);
 	}
 
