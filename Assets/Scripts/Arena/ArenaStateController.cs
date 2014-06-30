@@ -6,7 +6,7 @@ public class ArenaStateController : MonoBehaviour {
 	public float secondStateChangeTimer;
 	public float thirdStateChangeTimer;
 	public float colliderRadiusSpeed;
-	public Object electrified;
+	public GameObject electrified;
 	
 	private GameObject electrifiedTemp;
 	private bool isState4 = false;
