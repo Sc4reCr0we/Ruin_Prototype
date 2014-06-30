@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\ControllerCursor.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Ruin-Unity-Layer\Assets\Script\Entity\PlayerState.cs">
     <Files>
-      <File FileName="Assets\Scripts\Camera\ControllerCursor.cs" Line="35" Column="4" />
-      <File FileName="Assets\Scripts\Player\OutsideArenaDamage.cs" Line="18" Column="77" />
-      <File FileName="Assets\Scripts\Ability Behaviours\Execute_Behaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Sound\PlayOneShot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Camera\CameraMovementDennis.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="118" Column="4" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="62" Column="51" />
+      <File FileName="..\Ruin-Unity-Layer\Assets\Script\Entity\PlayerState.cs" Line="52" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
