@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\slotManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Hellbound\Assets\Scripts\Character\ThirdPersonController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\slotManager.cs" Line="228" Column="85" />
-      <File FileName="Assets\Scripts\Camera\CameraMovementDennis.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Sound\ListenerPosition.cs" Line="1" Column="1" />
+      <File FileName="..\Hellbound\Assets\Scripts\Character\ThirdPersonController.cs" Line="97" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

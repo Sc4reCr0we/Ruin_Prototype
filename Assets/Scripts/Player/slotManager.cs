@@ -215,11 +215,10 @@ public class slotManager : MonoBehaviour {
 				plane.Raycast(ray, out rayDistance);
 				
 				currentSlot.setReady(false);
-				isSmartCast = false;
 				setCooldown();
 				animator.SetBool ("casting", true);
 				if(playerNumber == 1)
-					targetPosition = ray.GetPoint(rayDistance);//Camera.main.ScreenToWorldPoint( Input.mousePosition );
+					targetPosition = ray.GetPoint(rayDistance);
 				if(playerNumber == 2)
 					targetPosition = player2Cursor.position;
 				castdelay();
