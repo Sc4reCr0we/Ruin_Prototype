@@ -275,6 +275,7 @@
      <Compile Include="Assets\Scripts\Abilities\Gust.cs" />
      <Compile Include="Assets\Scripts\Abilities\Reflect.cs" />
      <Compile Include="Assets\Scripts\Abilities\Scatter.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Scatter1.cs" />
      <Compile Include="Assets\Scripts\Abilities\SmileyBomb.cs" />
      <Compile Include="Assets\Scripts\Abilities\Teleport.cs" />
      <Compile Include="Assets\Scripts\Abilities\Wall.cs" />
@@ -324,6 +325,7 @@
      <Compile Include="Assets\Scripts\shotScript.cs" />
      <Compile Include="Assets\Scripts\sortingLayer.cs" />
      <Compile Include="Assets\Scripts\sortingLayer1.cs" />
+     <Compile Include="Assets\playbackSpeed.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.6.3.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditive.shader" />

@@ -4,7 +4,7 @@ using System.Collections;
 public class Scatter : Ability{
 	
 	private float castTurnSpeed = 100;
-	public float angleBetweenProjectiles = -5;
+	public float angleBetweenProjectiles = 0;
 	public float timeBetweenProjectiles = 2000f;
 	public int numberOfProjectiles = 7;
 	public float slowBy;
@@ -20,10 +20,10 @@ public class Scatter : Ability{
 		Invoke ("instanceCreate", casttime);
 
 	}
-	
+
 	public override void instanceCreate(){
 		Vector3 currentPosition = playerID.transform.position;
-		Vector3 mousePos 		= targetPosition;
+		Vector3 mousePos 		= playerID.GetComponent<slotManager>().targetPos();
 		Vector3 scatterDir		= mousePos - currentPosition;
 		scatterDir.z 			= 0;
 		scatterDir.Normalize ();

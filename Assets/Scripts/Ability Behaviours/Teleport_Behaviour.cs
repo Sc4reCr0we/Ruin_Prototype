@@ -13,7 +13,9 @@ public class Teleport_Behaviour : MonoBehaviour {
 	{
 		if (playerID != null)
 		{
+			SpecialEffectsHelper.Instance.Teleport(playerID.transform.position);
 			playerID.transform.position = gameObject.transform.position;
+			SpecialEffectsHelper.Instance.Teleport(gameObject.transform.position);
 			Destroy(gameObject);
 		}
 	}
