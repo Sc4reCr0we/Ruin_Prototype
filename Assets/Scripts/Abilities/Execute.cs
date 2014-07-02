@@ -8,12 +8,12 @@ public class Execute : Ability{
 	
 	public override void cast(GameObject playerID1, Vector3 targetPos){
 		playerID = playerID1;
-		targetPosition = targetPos;
 		playerID.GetComponent<stateController> ().setSlow (casttime,100);
 		Invoke ("instanceCreate", casttime);
 	}
 	
 	public override void instanceCreate(){
+		targetPosition = playerID.GetComponent<slotManager> ().targetPos ();
 		Vector3 currentPosition = playerID.transform.position;
 		Vector3 mousePos 		= targetPosition;
 		Vector3 executeDir		= mousePos - currentPosition;

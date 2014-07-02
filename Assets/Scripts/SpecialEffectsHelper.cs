@@ -14,6 +14,7 @@ public class SpecialEffectsHelper : MonoBehaviour
 	public ParticleSystem iceEffect;
 	public ParticleSystem windEffect;
 	public ParticleSystem empEffect;
+	public ParticleSystem teleEffect;
 	
 	void Awake()
 	{
@@ -53,7 +54,12 @@ public class SpecialEffectsHelper : MonoBehaviour
 		
 		instantiate(empEffect, position);
 	}
-	
+
+	public void Teleport(Vector3 position)
+	{
+		
+		instantiate(teleEffect, position);
+	}
 	/// <summary>
 	/// Instantiate a Particle system from prefab
 	/// </summary>
