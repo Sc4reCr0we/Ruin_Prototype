@@ -112,7 +112,7 @@
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
      <None Include="Assets\Realistic Effects Pack\Shaders\WaterFree.shader" />
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Martin/Documents/GitHub/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Martin/Documents/GitHub/new/Ruin_Prototype/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
