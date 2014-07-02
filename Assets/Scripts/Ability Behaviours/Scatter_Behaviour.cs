@@ -54,6 +54,7 @@ public class Scatter_Behaviour : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 		
 		if (other != null && other.gameObject.tag== "Player") {
+			Debug.Log("scatter hit");
 			SpecialEffectsHelper.Instance.Ice(transform.position);
 			other.gameObject.GetComponent<HealthScript> ().setHealth (damage);
 			other.gameObject.GetComponent<stateController>().setSlow(slowTime,slowBy);

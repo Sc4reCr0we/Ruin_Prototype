@@ -22,7 +22,6 @@ public class Scatter1 : Ability{
 	}
 
 	public override void instanceCreate(){
-		Debug.Log ("angle:" + currentAngle);
 		Vector3 currentPosition = playerID.transform.position;
 		Vector3 mousePos 		= playerID.GetComponent<slotManager>().targetPos();
 		Vector3 scatterDir		= mousePos - currentPosition;
