@@ -11,6 +11,10 @@ public class stateController : MonoBehaviour {
 	public Object slow;
 	public Object silence;
 
+	public float slowTime;
+	public float silenceTime;
+	public float stunTime;
+
 	private GameObject stunTemp;
 	private GameObject slowTemp;
 	private GameObject silenceTemp;
@@ -27,10 +31,10 @@ public class stateController : MonoBehaviour {
 	}
 
 	public void setSlow (float duration, float amount){
+		Debug.Log("Player_slow");
 		isSlowed = true;
 		gameObject.GetComponent<PlayerMovement>().slowDown(amount);
-		Invoke ("removeSlow", duration);
-		Debug.Log("Player_slow");
+		slowTime += duration;
 	}
 
 	public void setStun(float duration){
@@ -63,13 +67,54 @@ public class stateController : MonoBehaviour {
 		gameObject.GetComponent<PlayerMovement>().setSpeedNormal();
 		Debug.Log("Player not slow");
 	}
+
+	private void slowCount(){
+		if (isSlowed){
+			if (slowTime > 0) {
+				slowTime -= 1*Time.deltaTime;
+			}
+			else if(slowTime < 0 || slowTime == 0){
+				removeSlow();
+				slowTime =0f;
+			}
+		}
+	}
+
+	private void silenceCount(){
+		if (isSilenced){
+			if (silenceTime > 0) {
+				silenceTime -= 1*Time.deltaTime;
+			}
+			else if(silenceTime < 0){
+				removeSilence();
+				silenceTime =0f;
+			}
+		}
+	}
+
+	private void stunCount(){
+		if (isStunned){
+			if (stunTime > 0) {
+				stunTime -= 1*Time.deltaTime;
+			}
+			else if(stunTime < 0){
+				removeStun();
+				stunTime =0f;
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
-	
+		slowTime 	= 0f;
+		silenceTime = 0f;
+		stunTime 	= 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		slowCount ();
+		stunCount ();
+		silenceCount ();
 	}
 }

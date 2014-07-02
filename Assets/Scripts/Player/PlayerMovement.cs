@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour {
 	public void slowDown(float amount)
 	{
 		amount /= 100f;
-		speed -= speed * amount;
+		speed = speed * amount;
 		
 	}
 

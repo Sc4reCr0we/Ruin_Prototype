@@ -1,5 +1,6 @@
 ﻿<Properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\Ruin-Unity-Layer\Assets\Script\Entity\PlayerState.cs">
     <Files>
@@ -20,6 +21,10 @@
     </Files>
   </MonoDevelop.Ide.Workbench>
 >>>>>>> 7d4417f536bee4a3fbae5187d69ce0ec4637fa5f
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+>>>>>>> acb9fc1ef2df86850dcdba050749e0747a57a06c
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
